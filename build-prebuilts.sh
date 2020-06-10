@@ -23,6 +23,7 @@ if [ -n ${build_soong} ]; then
 }
 EOF
     SOONG_BINARIES=(
+        dtc
         lz4
     )
 
