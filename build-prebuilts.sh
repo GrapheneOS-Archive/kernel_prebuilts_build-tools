@@ -27,6 +27,11 @@ EOF
         lz4
     )
 
+    # scripts to copy as-is into the output bin/
+    scripts=(
+        tools/libufdt/utils/src/mkdtboimg.py
+    )
+
     binaries="${SOONG_BINARIES[@]/#/${SOONG_HOST_OUT}/bin/}"
 
     # Build everything
@@ -35,6 +40,9 @@ EOF
     # Stage binaries
     mkdir -p ${SOONG_OUT}/dist/bin
     cp ${binaries} ${SOONG_OUT}/dist/bin/
+
+    # Stage scripts
+    cp ${scripts} ${SOONG_OUT}/dist/bin/
 
     # Package prebuilts
     (
