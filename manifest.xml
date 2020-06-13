@@ -5,15 +5,19 @@
 
   <default remote="aosp" revision="master" />
 
+  <project name="platform/external/kmod" path="external/kmod" revision="e62d44322d84833a2cf5b4ee649d65481504b7ae" />
+
   <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="90e45fec56fdeac84c9eb174c63fa6e748c6faa9" />
 
-  <project name="platform/build/soong" path="build/soong" revision="d297b77e84b05c3397bf7b8853e182e8f5576e6d">
+  <project name="platform/build/soong" path="build/soong" revision="000aef69b547b20553ac779d1bc8726af4b5c1d9">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
 </project>
 
   <project clone-depth="1" groups="linux" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="0ec7b7087c2eb9a8429f2fb4c2ed121c18132657" />
+
+  <project name="platform/system/libufdt" path="tools/libufdt" revision="9ac361251b4ed3b891b479045f5c96edc2c83d74" />
 
   <project name="platform/external/golang-protobuf" path="external/golang-protobuf" revision="b34db27e38b1b60c83ab7c3a1985203c3f98281b" />
 
@@ -31,7 +35,7 @@
 
   <project name="platform/external/lz4" path="external/lz4" revision="8945a6ba560f35e6349db6687f185148a4d95124" />
 
-  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="aa060d30d46d240d453c05777de348746eab4ed7" />
+  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="b3ebbf2bd27b84382c8ddca55cf2df8c1ad2aab2" />
 
   <project name="platform/external/dtc" path="external/dtc" revision="4b9b2da7a79260746ac8698e441c69d004379e83" />
 </manifest>
