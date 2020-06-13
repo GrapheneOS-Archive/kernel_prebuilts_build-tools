@@ -23,6 +23,7 @@ if [ -n ${build_soong} ]; then
 }
 EOF
     SOONG_BINARIES=(
+        depmod
         dtc
         lz4
     )
@@ -40,6 +41,7 @@ EOF
     # Stage binaries
     mkdir -p ${SOONG_OUT}/dist/bin
     cp ${binaries} ${SOONG_OUT}/dist/bin/
+    cp -R ${SOONG_HOST_OUT}/lib* ${SOONG_OUT}/dist/
 
     # Stage scripts
     cp ${scripts} ${SOONG_OUT}/dist/bin/
