@@ -26,11 +26,7 @@ EOF
         depmod
         dtc
         lz4
-    )
-
-    # scripts to copy as-is into the output bin/
-    scripts=(
-        tools/libufdt/utils/src/mkdtboimg.py
+        mkdtboimg.py
     )
 
     binaries="${SOONG_BINARIES[@]/#/${SOONG_HOST_OUT}/bin/}"
@@ -42,9 +38,6 @@ EOF
     mkdir -p ${SOONG_OUT}/dist/bin
     cp ${binaries} ${SOONG_OUT}/dist/bin/
     cp -R ${SOONG_HOST_OUT}/lib* ${SOONG_OUT}/dist/
-
-    # Stage scripts
-    cp ${scripts} ${SOONG_OUT}/dist/bin/
 
     # Package prebuilts
     (
