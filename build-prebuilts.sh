@@ -23,6 +23,8 @@ if [ -n ${build_soong} ]; then
 }
 EOF
     SOONG_BINARIES=(
+        abidiff
+        abidw
         blk_alloc_to_base_fs
         build_image
         depmod
