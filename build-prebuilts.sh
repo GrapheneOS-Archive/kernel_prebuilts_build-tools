@@ -27,6 +27,7 @@ EOF
         dtc
         lz4
         mkdtboimg.py
+        ufdt_apply_overlay
     )
 
     binaries="${SOONG_BINARIES[@]/#/${SOONG_HOST_OUT}/bin/}"
