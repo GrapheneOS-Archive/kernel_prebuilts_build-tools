@@ -27,6 +27,7 @@ EOF
         dtc
         lz4
         mkdtboimg.py
+        swig
         ufdt_apply_overlay
     )
 
