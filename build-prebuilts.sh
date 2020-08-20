@@ -23,11 +23,16 @@ if [ -n ${build_soong} ]; then
 }
 EOF
     SOONG_BINARIES=(
+        blk_alloc_to_base_fs
+        build_image
         depmod
         dtc
+        e2fsck
         lz4
         mkdtboimg.py
+        simg2img
         swig
+        tune2fs
         ufdt_apply_overlay
     )
 
