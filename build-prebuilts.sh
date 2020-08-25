@@ -30,6 +30,7 @@ EOF
         e2fsck
         lz4
         mkdtboimg.py
+        mkuserimg_mke2fs
         simg2img
         swig
         tune2fs
