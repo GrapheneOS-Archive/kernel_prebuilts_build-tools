@@ -31,7 +31,6 @@ EOF
         lz4
         mkdtboimg.py
         mkuserimg_mke2fs
-        pahole
         simg2img
         swig
         tune2fs
