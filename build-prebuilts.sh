@@ -28,6 +28,7 @@ EOF
         depmod
         dtc
         e2fsck
+        e2fsdroid
         lz4
         mkdtboimg.py
         mkuserimg_mke2fs
