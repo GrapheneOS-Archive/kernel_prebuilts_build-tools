@@ -49,6 +49,17 @@ EOF
     cp ${binaries} ${SOONG_OUT}/dist/bin/
     cp -R ${SOONG_HOST_OUT}/lib* ${SOONG_OUT}/dist/
 
+    # Stage include files
+    include_dir=${SOONG_OUT}/dist/include
+    mkdir -p ${include_dir}/openssl/
+    cp -a ${TOP}/external/boringssl/include/openssl/* ${include_dir}/openssl/
+
+    # Patch dist dir
+    (
+      cd ${SOONG_OUT}/dist/
+      ln -sf libcrypto-host.so lib64/libcrypto.so
+    )
+
     # Package prebuilts
     (
         cd ${SOONG_OUT}/dist
