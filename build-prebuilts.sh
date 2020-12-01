@@ -39,10 +39,15 @@ EOF
         ufdt_apply_overlay
     )
 
+    SOONG_LIBRARIES=(
+        libcrypto-host.so
+    )
+
     binaries="${SOONG_BINARIES[@]/#/${SOONG_HOST_OUT}/bin/}"
+    libraries="${SOONG_LIBRARIES[@]/#/${SOONG_HOST_OUT}/lib64/}"
 
     # Build everything
-    build/soong/soong_ui.bash --make-mode --skip-make ${binaries}
+    build/soong/soong_ui.bash --make-mode --skip-make ${binaries} ${libraries}
 
     # Stage binaries
     mkdir -p ${SOONG_OUT}/dist/bin
