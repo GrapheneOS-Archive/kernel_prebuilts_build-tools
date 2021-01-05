@@ -27,10 +27,12 @@ EOF
         abidw
         blk_alloc_to_base_fs
         build_image
+        build_super_image
         depmod
         dtc
         e2fsck
         e2fsdroid
+        lpmake
         lz4
         mkdtboimg.py
         mkuserimg_mke2fs
