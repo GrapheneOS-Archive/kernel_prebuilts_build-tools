@@ -45,6 +45,7 @@ EOF
 
     SOONG_LIBRARIES=(
         libcrypto-host.so
+        libelf.so
     )
 
     binaries="${SOONG_BINARIES[@]/#/${SOONG_HOST_OUT}/bin/}"
@@ -62,6 +63,15 @@ EOF
     include_dir=${SOONG_OUT}/dist/include
     mkdir -p ${include_dir}/openssl/
     cp -a ${TOP}/external/boringssl/include/openssl/* ${include_dir}/openssl/
+
+    # The elfutils header locations are messy; just make them match
+    # common Linux distributions, as this is what Linux expects
+    mkdir -p ${include_dir}/elfutils
+    cp -a ${TOP}/external/elfutils/libelf/gelf.h ${include_dir}/
+    cp -a ${TOP}/external/elfutils/libelf/libelf.h ${include_dir}/
+    cp -a ${TOP}/external/elfutils/libelf/nlist.h ${include_dir}/
+    cp -a ${TOP}/external/elfutils/libelf/elf-knowledge.h ${include_dir}/elfutils/
+    cp -a ${TOP}/external/elfutils/version.h ${include_dir}/elfutils/
 
     # Patch dist dir
     (
