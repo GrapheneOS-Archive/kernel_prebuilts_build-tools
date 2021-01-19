@@ -9,7 +9,7 @@
 
   <project name="platform/external/libxml2" path="external/libxml2" revision="e9b72b5e2d4a2c67ebc9df8a3237dda8f083efd5" />
 
-  <project name="platform/build/soong" path="build/soong" revision="e7c39a5da444701fafdf89a1c4c40c71e72ea3df">
+  <project name="platform/build/soong" path="build/soong" revision="0e3aaa47aa950a7ace18cde1c8b9bae3d9959752">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
@@ -19,15 +19,17 @@
 
   <project name="platform/external/sqlite" path="external/sqlite" revision="6dc3f23c92f9015532056abcbf029c2a2abb4d00" />
 
+  <project name="platform/external/libbpf" path="external/libbpf" revision="0c2054ec73d65961fe8d605caefaf7deb66c755c" />
+
   <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="93585afcecf50b04728ff21e57be7f5a2d579546" />
 
-  <project name="platform/bionic" path="bionic" revision="b1ba762e34850582a1156ac56d280c8ce1980b28" />
+  <project name="platform/bionic" path="bionic" revision="edec069bb6403aed443171ac3de9b33a731ca36f" />
 
-  <project name="platform/external/icu" path="external/icu" revision="cc5ee565bc550174975ecce29e887f8fdaee5e97" />
+  <project name="platform/external/icu" path="external/icu" revision="5dd32c80836c130445c5948162144d74e374688e" />
 
   <project clone-depth="1" groups="linux" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="0f0f207a3a947fe60986dfcfa17ae178d4caf2af" />
 
-  <project name="platform/external/zlib" path="external/zlib" revision="4fa66caa136303294cabb33a634c6ccf18926280" />
+  <project name="platform/external/zlib" path="external/zlib" revision="0a3c0efda6c8145f3a5d9ab3794b35dad1dfbfb0" />
 
   <project name="platform/external/dtc" path="external/dtc" revision="9591d1638e01e892a38899970e92f4b0571a1848" />
 
@@ -35,7 +37,7 @@
 
   <project name="platform/system/libbase" path="system/libbase" revision="be15867b32f675c5677ef6be9e4d8f270552b44a" />
 
-  <project name="platform/external/dwarves" path="external/dwarves" revision="f769281fd54254c9e879435ecdd2237ac010e8a5" />
+  <project name="platform/external/dwarves" path="external/dwarves" revision="2d4e4e82dbd70a5c07c507f0b613834dc07f163f" />
 
   <project name="platform/external/selinux" path="external/selinux" revision="ec6a9c94b27e78cc9fef600cc5c4688cc4943d84" />
 
@@ -49,41 +51,39 @@
 
   <project name="platform/external/libcxxabi" path="external/libcxxabi" revision="4b3634b5f8131cf59b3670148079ab1e3622b413" />
 
-  <project name="platform/external/libbpf" path="external/dwarves/lib/bpf" revision="eba15fdedda4aad74494ed4bbed55d0c36494b12" />
+  <project name="platform/system/logging" path="system/logging" revision="9fe5a996cf0651644b8ca25046378ad3212bbf97" />
 
   <project name="platform/external/swig" path="external/swig" revision="0ffab894f917fcbbd031eaab870fbabaefe5daaa" />
 
-  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="c552cb8e753abff96127e33b80955efea799c4b9" />
+  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="9a4711e27ec3e66bd3d2bb24202f59cc1b3fe5a6" />
 
-  <project name="platform/system/core" path="system/core" revision="270c98f1902b0e7dcc0ad837a54b4fb3c50cb577" />
+  <project name="platform/system/core" path="system/core" revision="c31f764362a5d19111d0baa22d5a6606c47b2ba4" />
 
   <project clone-depth="1" groups="linux" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="83bd1712fc51dce355c8af7cf33625baa3dd2b88" />
 
   <project name="platform/external/expat" path="external/expat" revision="de3449cb2fbaa60c4c28763114540f465d17ed6e" />
 
-  <project clone-depth="1" name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" revision="3555e8a0e7c1180da3429e9811c9afbd7cb4c2fd" />
+  <project clone-depth="1" name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" revision="4b1f33a9fa0b72e176840f162a49373d6429fc72" />
 
   <project name="platform/external/golang-protobuf" path="external/golang-protobuf" revision="3f39cb7711bee92f34207510c257118149ed2508" />
 
-  <project name="platform/system/logging" path="system/logging" revision="2e329310ed8c9185a9fe76ead8e88a49f9d4df0c" />
-
-  <project name="platform/external/libabigail" path="external/libabigail" revision="1b4e95ec43c2d21cf203617b57fb6b76d89baf95" />
+  <project name="platform/external/libabigail" path="external/libabigail" revision="1c63bd1b1da7f1c8ee94cae48324c25cc019bca6" />
 
   <project name="platform/external/python/cpython2" path="external/python/cpython2" revision="ebadebeec5415918b68cc6a6569df23c51f63bd7" />
 
-  <project name="platform/system/extras" path="system/extras" revision="c1cc718bcc6965536d5c6be8bc9e65f6690ecacc" />
+  <project name="platform/system/extras" path="system/extras" revision="3ad403bba54a933bf81b0d816dfdbbf05765837f" />
 
   <project name="platform/build/blueprint" path="build/blueprint" revision="52176e98518be598f45b6ec278d5c392a5a43acb" />
 
   <project name="platform/external/lz4" path="external/lz4" revision="9fd99d12c57b37f8d24d95e0ce70229628b4a1cf" />
 
-  <project name="platform/external/elfutils" path="external/elfutils" revision="6bef205191e9f9912517da587170f020badaa103" />
+  <project name="platform/external/elfutils" path="external/elfutils" revision="7233154d6f95065e7da63d5e2a3d2e2ade0fbedc" />
 
   <project name="platform/external/fmtlib" path="external/fmtlib" revision="a3306f2cbe69a421549b592970dd61dd61a8c54b" />
 
-  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="66579385512a72b21c9d521615410193e78791c7" />
+  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="24effbf65022ebdfd0803a5c1e4b645e907d555e" />
 
-  <project groups="pdk" name="platform/build" path="build/make" revision="de32b6d59cbe50afc07d3440826282343b9da6f6">
+  <project groups="pdk" name="platform/build" path="build/make" revision="fc596c996f35e123a0c2430894500aae97b5fde7">
     <linkfile dest="build/tools" src="tools" />
 </project>
 
