@@ -80,6 +80,14 @@ EOF
     cp -a ${TOP}/external/elfutils/libelf/elf-knowledge.h ${include_dir}/elfutils/
     cp -a ${TOP}/external/elfutils/version.h ${include_dir}/elfutils/
 
+    # Stage share files
+    share_dir=${SOONG_OUT}/dist/share
+    mkdir -p ${share_dir}
+
+    # Copy over the testkey for signing
+    mkdir -p ${share_dir}/avb
+    cp -a ${TOP}/external/avb/test/data/testkey_rsa2048.pem ${share_dir}/avb/
+
     # Patch dist dir
     (
       cd ${SOONG_OUT}/dist/
