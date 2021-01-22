@@ -80,9 +80,6 @@ EOF
     cp -a ${TOP}/external/elfutils/libelf/elf-knowledge.h ${include_dir}/elfutils/
     cp -a ${TOP}/external/elfutils/version.h ${include_dir}/elfutils/
 
-    unzip -q -d ${SOONG_OUT}/dist/py3-stdlib ${py3_stdlib_zip}
-    cp -a ${TOP}/external/python/cpython3/LICENSE ${SOONG_OUT}/dist/py3-stdlib/
-
     # Patch dist dir
     (
       cd ${SOONG_OUT}/dist/
