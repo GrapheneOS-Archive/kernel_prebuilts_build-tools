@@ -1,95 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <manifest>
-  <remote fetch="https://android-review.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/" />
+  <remote name="aosp" fetch="https://android-review.googlesource.com/" review="https://android-review.googlesource.com/" />
 
-  <default remote="aosp" revision="master" />
+  <default revision="master" remote="aosp" />
 
-  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="7568ee7fc921690e303cbf7088f18e6f5cfaaba3" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" revision="7ae3b7d58ac2b3615daac366e7b150bcb7a3bc5a" />
 
-  <project name="platform/external/libxml2" path="external/libxml2" revision="e9b72b5e2d4a2c67ebc9df8a3237dda8f083efd5" />
+  <project path="build/blueprint" name="platform/build/blueprint" revision="51868f1577e90157fa961929071b0cdf6f195b66" />
 
-  <project name="platform/build/soong" path="build/soong" revision="0bf77198b5bd2c441a83171b1416d78512705911">
+  <project path="build/make" name="platform/build" groups="pdk" revision="6023b1944d2c2d2895d125d7c20ff3c40ff39a1f">
+    <linkfile dest="build/tools" src="tools" />
+</project>
+
+  <project path="build/soong" name="platform/build/soong" revision="a0acfa8b85c17b84e3bc36a2b2c008b9c9597ecc">
     <linkfile dest="Android.bp" src="root.bp" />
 
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
 </project>
 
-  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" revision="9dce0711d7df562f0cfb286313691a347c92669f" />
+  <project path="external/golang-protobuf" name="platform/external/golang-protobuf" revision="36730171d1fa4a234c98eb51b497673badaa3d3d" />
 
-  <project name="platform/external/sqlite" path="external/sqlite" revision="6dc3f23c92f9015532056abcbf029c2a2abb4d00" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="linux" clone-depth="1" revision="2c565140e041831a36486409ff3d013150d46456" />
 
-  <project name="platform/external/libbpf" path="external/libbpf" revision="0c2054ec73d65961fe8d605caefaf7deb66c755c" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" revision="dd77fd60ffcac0d6963b9407eb1860c19f0c7bcb" />
 
-  <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="93585afcecf50b04728ff21e57be7f5a2d579546" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" revision="eaf3e42071dd2b56431a6c0e9ad29fa6cc90f9d1" />
 
-  <project name="platform/bionic" path="bionic" revision="7032fec1420b567ae7f6f66963c70345316b5d0f" />
+  <project path="prebuilts/go/linux-x86" name="platform/prebuilts/go/linux-x86" groups="linux" clone-depth="1" revision="cb309e79113b0b773635eb54df79f285900538c0" />
 
-  <project name="platform/external/icu" path="external/icu" revision="96feb80ed5b18170cdfa053666ea8004478c4529" />
+  <project path="prebuilts/ninja/linux-x86" name="platform/prebuilts/ninja/linux-x86" groups="linux" clone-depth="1" revision="6369b19fc3fbe765636af75d394627e2b92599ed" />
 
-  <project clone-depth="1" groups="linux" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="0f0f207a3a947fe60986dfcfa17ae178d4caf2af" />
+  <project path="bionic" name="platform/bionic" revision="ac3fcc6b8c645d26ba94026397ec53aa773e636b" />
 
-  <project name="platform/external/zlib" path="external/zlib" revision="0a3c0efda6c8145f3a5d9ab3794b35dad1dfbfb0" />
+  <project path="external/boringssl" name="platform/external/boringssl" revision="ff86bdb9ab7cfab0cc856e7cb9609fe8c778adfc" />
 
-  <project name="platform/external/dtc" path="external/dtc" revision="9591d1638e01e892a38899970e92f4b0571a1848" />
+  <project path="external/dwarves" name="platform/external/dwarves" revision="2d4e4e82dbd70a5c07c507f0b613834dc07f163f" />
 
-  <project name="platform/external/kmod" path="external/kmod" revision="83d182a671df25de32b815f1f0461af6e86d215c" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" revision="573989abdc6bda2eea91609922d66a4fa6482fae" />
 
-  <project name="platform/system/libbase" path="system/libbase" revision="ecb6afe310d65154f4b3e63dc39ea490a2fd1768" />
+  <project path="external/elfutils" name="platform/external/elfutils" revision="e9a427a9f90b82901c6113185668281ead7924fd" />
 
-  <project name="platform/external/dwarves" path="external/dwarves" revision="2d4e4e82dbd70a5c07c507f0b613834dc07f163f" />
+  <project path="external/expat" name="platform/external/expat" revision="f28db35a313803cfc89d10c89f28070aba6fa551" />
 
-  <project name="platform/external/selinux" path="external/selinux" revision="ec6a9c94b27e78cc9fef600cc5c4688cc4943d84" />
+  <project path="external/fmtlib" name="platform/external/fmtlib" revision="c8cf8c4af6dc537f5debc6f8eb186955a7a2479b" />
 
-  <project name="platform/external/avb" path="external/avb" revision="0d584b6e9569c329c1815a560e0682e9f38070d9" />
+  <project path="external/icu" name="platform/external/icu" revision="0fe8a809ce964f344ae6bd15b7c063c8c6d355a1" />
 
-  <project name="platform/external/libcxx" path="external/libcxx" revision="a23eef8375ab8e8d66833668486a50f1fe47de4a" />
+  <project path="external/libbpf" name="platform/external/libbpf" revision="0c2054ec73d65961fe8d605caefaf7deb66c755c" />
 
-  <project name="platform/external/boringssl" path="external/boringssl" revision="17486117acfddecea663c62f1aed75589a632ce5" />
+  <project path="external/libabigail" name="platform/external/libabigail" revision="aae57f595f097904194a8afbada6ff7a5c1525e1" />
 
-  <project clone-depth="1" groups="linux" name="platform/prebuilts/ninja/linux-x86" path="prebuilts/ninja/linux-x86" revision="6369b19fc3fbe765636af75d394627e2b92599ed" />
+  <project path="external/libcxx" name="platform/external/libcxx" revision="7f4b512be02f824f717feffde702a5736d808b3d" />
 
-  <project name="platform/external/pcre" path="external/pcre" revision="1f5bdcbc1face163b9c0d7f149a2e24d847994bc" />
+  <project path="external/libcxxabi" name="platform/external/libcxxabi" revision="1c0480046332a1d9d80b7f139cb4367ab555c40e" />
 
-  <project name="platform/external/libcxxabi" path="external/libcxxabi" revision="4b3634b5f8131cf59b3670148079ab1e3622b413" />
+  <project path="external/libxml2" name="platform/external/libxml2" revision="aa9baca6c580bbe229f169b40610e352ccaad9dc" />
 
-  <project name="platform/system/logging" path="system/logging" revision="3d0c4367eba35695ad3ac55204a2f886e2118ce7" />
+  <project path="external/pcre" name="platform/external/pcre" revision="46790d2eae893d1489b14aff4525d9cb1b87c37a" />
 
-  <project name="platform/external/swig" path="external/swig" revision="0ffab894f917fcbbd031eaab870fbabaefe5daaa" />
+  <project path="external/python/cpython2" name="platform/external/python/cpython2" revision="84389f666719a457ef1a9e6a8cee6b9e327004d6" />
 
-  <project clone-depth="1" name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="60bcc555d8f5ae38d56a72e086795c21aea8f956" />
+  <project path="external/python/cpython3" name="platform/external/python/cpython3" revision="5f197c6df1c1a3fc2a846b5b2fe164a2c29e0693" />
 
-  <project name="platform/system/core" path="system/core" revision="e0826c75df16adcfff653bfaad93ac3009fddd03" />
+  <project path="external/selinux" name="platform/external/selinux" revision="d24eb86be44c31510e1f05b1b7ba54d5504e4c52" />
 
-  <project clone-depth="1" groups="linux" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="4bba08ffb64de58c6356d12727bb5d6a3099b8e9" />
+  <project path="external/sqlite" name="platform/external/sqlite" revision="22c60569b4fff427dd3cc976f4fced0a5a1037bb" />
 
-  <project name="platform/external/expat" path="external/expat" revision="de3449cb2fbaa60c4c28763114540f465d17ed6e" />
+  <project path="external/swig" name="platform/external/swig" revision="0ffab894f917fcbbd031eaab870fbabaefe5daaa" />
 
-  <project clone-depth="1" name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" revision="4b1f33a9fa0b72e176840f162a49373d6429fc72" />
+  <project path="external/zlib" name="platform/external/zlib" revision="56a2d43793cfec2d0c71e2188535cf434b4d34d8" />
 
-  <project name="platform/external/golang-protobuf" path="external/golang-protobuf" revision="3f39cb7711bee92f34207510c257118149ed2508" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" revision="9d863b381f36907735cf743fcbb32e49569a2ce0" />
 
-  <project name="platform/external/libabigail" path="external/libabigail" revision="c1db8a7be6923a47b640ce1bb3c62b1eccfada2a" />
+  <project path="system/core" name="platform/system/core" revision="9865e47e1e652946f5d5c871fd20427ff20a969d" />
 
-  <project name="platform/external/python/cpython2" path="external/python/cpython2" revision="ebadebeec5415918b68cc6a6569df23c51f63bd7" />
+  <project path="system/logging" name="platform/system/logging" revision="f5c76cd8554f41208be13760615216658afd2d46" />
 
-  <project name="platform/external/python/cpython3" path="external/python/cpython3" revision="4eb8ce654e88fbfdb2a27745323951bd1ec79d66" />
+  <project path="system/extras" name="platform/system/extras" revision="29371074ee00adf7b23f7dc4174128f1ca4a73ff" />
 
-  <project name="platform/system/extras" path="system/extras" revision="aa4612d4473b9eda1aca7ab679888b9a38f07fb3" />
+  <project path="system/libbase" name="platform/system/libbase" revision="5bf6ad8f591ea517ff4920a9fe4e014f082a7b18" />
 
-  <project name="platform/build/blueprint" path="build/blueprint" revision="eecfdd316b0292a0a28f67bfcbcf1109359aec92" />
+  <project path="system/tools/aidl" name="platform/system/tools/aidl" revision="f6f5c8650d1bfef0b37b4936a235d434151fc01d" />
 
-  <project name="platform/external/lz4" path="external/lz4" revision="9fd99d12c57b37f8d24d95e0ce70229628b4a1cf" />
+  <project path="external/avb" name="platform/external/avb" revision="1bf1b4c3b17d3009c8e13979685bce563eaf2204" />
 
-  <project name="platform/external/elfutils" path="external/elfutils" revision="7233154d6f95065e7da63d5e2a3d2e2ade0fbedc" />
+  <project path="external/dtc" name="platform/external/dtc" revision="678be469e36bd0728e907c5a764b345018b1e211" />
 
-  <project name="platform/external/fmtlib" path="external/fmtlib" revision="a3306f2cbe69a421549b592970dd61dd61a8c54b" />
+  <project path="external/lz4" name="platform/external/lz4" revision="2fdb46f02616301a2a34da818e58fa44f12696cf" />
 
-  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="42867c7864ae3c41c26f2af9f7fa25752e9d7337" />
+  <project path="external/kmod" name="platform/external/kmod" revision="c9f9833121b0a9af436a58a7c9690d029d446d53" />
 
-  <project groups="pdk" name="platform/build" path="build/make" revision="55abbc75d27d3400327795b79fc81f2e9ce7cd40">
-    <linkfile dest="build/tools" src="tools" />
-</project>
-
-  <project name="platform/system/libufdt" path="tools/libufdt" revision="b3c8ef67f908c1814ca9132d5fec8a4b4bf9e96c" />
+  <project path="tools/libufdt" name="platform/system/libufdt" revision="48ab4764d49390745643b4a3531e762925d441ac" />
 </manifest>
