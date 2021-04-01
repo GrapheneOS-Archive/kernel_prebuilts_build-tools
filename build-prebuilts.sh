@@ -33,6 +33,7 @@ EOF
         dtc
         e2fsck
         e2fsdroid
+        img2simg
         lpmake
         lz4
         mkdtboimg.py
