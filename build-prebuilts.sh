@@ -37,6 +37,7 @@ EOF
         lpmake
         lz4
         mkdtboimg.py
+        mke2fs
         mkuserimg_mke2fs
         pahole
         simg2img
