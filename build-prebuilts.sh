@@ -36,6 +36,7 @@ EOF
         img2simg
         lpmake
         lz4
+        mkbootfs
         mkdtboimg.py
         mke2fs
         mkuserimg_mke2fs
