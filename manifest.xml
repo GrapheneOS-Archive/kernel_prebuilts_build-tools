@@ -93,5 +93,5 @@
 
   <project path="external/kmod" name="platform/external/kmod" revision="c9f9833121b0a9af436a58a7c9690d029d446d53" />
 
-  <project path="tools/libufdt" name="platform/system/libufdt" revision="48ab4764d49390745643b4a3531e762925d441ac" />
+  <project path="tools/libufdt" name="platform/system/libufdt" revision="f6b572a2f682196651362713820ed02b6d7e29a9" />
 </manifest>
